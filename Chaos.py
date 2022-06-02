@@ -1,4 +1,3 @@
-from cProfile import label
 import matplotlib.pyplot as plt #Import Matplotlib module
 import numpy as np #import Numpy module
 
@@ -67,7 +66,7 @@ StartPoint_XList = np.random.randint(0, Plot_Size, How_M_Points) #Generating lis
 
 
 StartPoint_YList = np.random.randint(0, Plot_Size, How_M_Points) #Generating list of Y coordonates for starting points and assign them random values
-   
+
 
 
 def Middle_Xcoordonates(x1, x2): #Calculate the middle X coordonates between x1 and x2
@@ -86,7 +85,7 @@ plt.scatter(Rand_UStartPointX, Rand_UStartPointY, s=25, edgecolors='black', c='r
 
 for i in range(NB_Iteration):
 
-    point = np.random.randint(0, How_M_Points, 1) #Toss a "How_M_Points" sided dice 
+    point = np.random.randint(0, How_M_Points, 1) #Toss a "How_M_Points" sided dice
 
     midx = Middle_Xcoordonates(List_AllDrawingPoints[i-1][0], StartPoint_XList[point]) #Calculate the middle point between the current point and one of the starting point (chosen by the dice)
     midy = Middle_Ycoordonates(List_AllDrawingPoints[i-1][1], StartPoint_YList[point]) #Same as above but for Y
@@ -98,7 +97,7 @@ for i in range(NB_Iteration):
 #Just doing this to be able to put one label and not NB_Iteration numbers label
 #Yes it's dirty but it works
 
-point = np.random.randint(0, How_M_Points, 1) #Toss a "How_M_Points" sided dice 
+point = np.random.randint(0, How_M_Points, 1) #Toss a "How_M_Points" sided dice
 
 midx = Middle_Xcoordonates(List_AllDrawingPoints[i-1][0], StartPoint_XList[point]) #Calculate the middle point between the current point and one of the starting point (chosen by the dice)
 midy = Middle_Ycoordonates(List_AllDrawingPoints[i-1][1], StartPoint_YList[point]) #Same as above but for Y
