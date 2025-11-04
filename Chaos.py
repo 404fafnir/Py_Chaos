@@ -53,8 +53,8 @@ elif int(Rand_UStartPointY) < 0 or int(Rand_UStartPointY) > Plot_Size:
     raise NameError("The value is not contain within the range of plot size you chose")
 
 
-Rand_UStartPointX = int(Rand_UStartPointX) #Just converting the str to int to avoid any problem when calculating
-Rand_UStartPointY = int(Rand_UStartPointY)
+Rand_UStartPointX = int(Rand_UStartPointX.item()) #Just converting the str to int to avoid any problem when calculating
+Rand_UStartPointY = int(Rand_UStartPointY.item())
 
 print('\n')
 
@@ -106,3 +106,4 @@ plt.scatter(midx, midy, s=10, edgecolors='none', c='green', label = "Points Calc
 
 plt.legend() #Show Legend
 plt.show() #Show the plot
+
